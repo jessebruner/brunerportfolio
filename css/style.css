@@ -1,0 +1,269 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+body{
+  background-color:;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav ul{
+  list-style-type: none;
+  margin-right:90px;
+  margin-top:15px;
+}
+
+nav li{
+  padding-right:50px;
+  font-family: 'Source Sans Pro', sans-serif;
+  display:inline;
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+
+#logo {
+  float:left;
+  margin-left:5%;
+  margin-top: 15px;
+  box-shadow: 4px 5px 10px #000020;
+  min-height:80px;
+  height:20%;
+  max-height:150px;
+  position: absolute;
+  transition: all .3s;
+}
+/* @keyframes logo {
+  from {
+    margin-left:5%;
+    margin-top: 15px;
+    box-shadow: 4px 5px 10px #000020;
+
+  }
+  to {
+    margin-top:20px;
+    margin-left:5.3%;
+    animation-duration: 1s;
+
+  }
+} */
+#logo:hover {
+  animation-name: logo;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+  box-shadow: 2px 3px 10px #000000;
+  margin-top:20px;
+  margin-left:5.3%;
+  animation-duration: 1s;
+}
+  #logo2 {
+  display:inline-flex;
+  font-size:1em;
+
+
+}
+
+  #logo1 {
+  /* Rotate from top left corner (not default) */
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip a:focus{
+  top:0;
+}
+
+*:focus {
+  border: 2px solid black;
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;  /*Can you explain what this does?*/
+  grid-row: 7 / 8;   /*Can you rewrite it?*/
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+.container{
+  display:grid;
+/*  grid-template-columns: 100px 500px 100px;
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-row-gap:15px;
+  width:100vw; */
+}
+
+.nav{
+  /*Provided*/
+  background-color: #fff;
+  padding: 20px 0px;
+  min-height:50px;
+  text-align: right;
+}
+
+
+header{
+  /* background-attachment: fixed;
+  background-image: url(../images/header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  */
+  background: rgb(151,113,255);
+ background: -moz-linear-gradient(329deg, rgba(151,113,255,1) 0%, rgba(115,0,255,1) 100%);
+ background: -webkit-linear-gradient(329deg, rgba(151,113,255,1) 0%, rgba(115,0,255,1) 100%);
+ background: linear-gradient(329deg, rgba(151,113,255,1) 0%, rgba(115,0,255,1) 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9771ff",endColorstr="#7300ff",GradientType=1);
+  height: 100vh;
+  width: 100vw;
+}
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.about-image{
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  max-height:700px;
+  overflow:hidden;
+  object-fit:cover;
+
+}
+
+.about{
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.method-image{
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  max-height: 700px;
+  overflow:hidden;
+  object-fit:cover;
+}
+
+.method{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+.clients-image{
+ grid-column: 1 / -1;
+ grid-row: 5 / 6;
+ max-height: 700px;
+ overflow:hidden;
+ object-fit:cover;
+}
+
+.clients{
+ grid-column: 2 / 3;
+ grid-row: 5 / 6;
+}
+
+.contact-image{
+   grid-column: 1 / -1;
+   grid-row: 6 / 7;
+   max-height: 700px;
+   overflow:hidden;
+   object-fit:cover;
+}
+
+.contact{
+   grid-column: 2 / 3;
+   grid-row: 6 / 7;
+}
+
+.text-block{
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+
+}
+
+
+/*tablet*/
+@media screen and (max-width: 900px) {
+  .nav {
+    text-align:center;
+    padding:0px;
+    min-height:none;
+  }
+  nav ul{
+    list-style-type: none;
+    margin-right:0px;
+    background-color:#fff;
+    height:100vh;
+  }
+
+  nav li{
+    font-family: 'Source Sans Pro', sans-serif;
+    display:block;
+    padding-top:50px;
+  }
+
+  nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  nav a:hover{
+      text-decoration:underline;
+  }
+
+
+
+}  /*End the media query*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: initial;
+    transition: initial;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}
